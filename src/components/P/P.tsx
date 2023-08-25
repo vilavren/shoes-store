@@ -2,9 +2,9 @@ import cn from 'classnames'
 import React, { FC } from 'react'
 
 import styles from './P.module.css'
-import { HtagProps } from './P.props'
+import { PProps } from './P.props'
 
-export const P: FC<HtagProps> = ({ size, bold, children }) => {
+export const P: FC<PProps> = ({ size, bold, children }) => {
   switch (size) {
     case 'l':
       return (
