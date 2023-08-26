@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 
 import { Button } from './components/Button/Button'
-import { Variant } from './components/Button/Button.props'
+import { Appearance } from './components/Button/Button.props'
 import { Htag } from './components/Htag/Htag'
 import { P } from './components/P/P'
 
@@ -21,12 +21,12 @@ export const App: FC = () => {
       <P size="xs">Lorem ipsum dolor sit amet consectetur.</P>
       <P size="tinny">Lorem ipsum dolor sit amet consectetur.</P>
 
-      <Button variant={Variant.Disable}>Disable</Button>
-      <Button variant={Variant.DisableSecondary}>Disable</Button>
-      <Button variant={Variant.Icon}>Icon</Button>
-      <Button variant={Variant.Primary}>Primary</Button>
-      <Button variant={Variant.Secondary}>Secondary</Button>
-      <Button variant={Variant.Shop}>Shop</Button>
+      <Button appearance={Appearance.Disable}>Disable</Button>
+      <Button appearance={Appearance.DisableSecondary}>Disable</Button>
+      <Button appearance={Appearance.Icon}>Icon</Button>
+      <Button appearance={Appearance.Primary}>Primary</Button>
+      <Button appearance={Appearance.Secondary}>Secondary</Button>
+      <Button appearance={Appearance.Shop}>Shop</Button>
     </div>
   )
 }

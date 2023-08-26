@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-export enum Variant {
+export enum Appearance {
   Disable = 'disable',
   DisableSecondary = 'disable-secondary',
   Icon = 'icon',
@@ -9,8 +9,7 @@ export enum Variant {
   Shop = 'shop',
 }
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLHeadingElement> {
+export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLElement> {
   children: ReactNode
-  variant: Variant
+  appearance: Appearance
 }

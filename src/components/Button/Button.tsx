@@ -2,46 +2,49 @@ import cn from 'classnames'
 import React, { FC } from 'react'
 
 import styles from './Button.module.css'
-import { ButtonProps, Variant } from './Button.props'
+import { ButtonProps, Appearance } from './Button.props'
 
-export const Button: FC<ButtonProps> = ({ children, variant }): JSX.Element => {
-  switch (variant) {
-    case Variant.Disable: {
+export const Button: FC<ButtonProps> = ({
+  children,
+  appearance,
+}): JSX.Element => {
+  switch (appearance) {
+    case Appearance.Disable: {
       return (
         <button className={cn(styles.button, styles.buttonDisable)}>
           {children}
         </button>
       )
     }
-    case Variant.DisableSecondary: {
+    case Appearance.DisableSecondary: {
       return (
         <button className={cn(styles.button, styles.buttonDisableSecondary)}>
           {children}
         </button>
       )
     }
-    case Variant.Icon: {
+    case Appearance.Icon: {
       return (
         <button className={cn(styles.button, styles.buttonIcon)}>
           {children}
         </button>
       )
     }
-    case Variant.Primary: {
+    case Appearance.Primary: {
       return (
         <button className={cn(styles.button, styles.buttonPrimary)}>
           {children}
         </button>
       )
     }
-    case Variant.Secondary: {
+    case Appearance.Secondary: {
       return (
         <button className={cn(styles.button, styles.buttonSecondary)}>
           {children}
         </button>
       )
     }
-    case Variant.Shop: {
+    case Appearance.Shop: {
       return (
         <button className={cn(styles.button, styles.buttonShop)}>
           {children}
