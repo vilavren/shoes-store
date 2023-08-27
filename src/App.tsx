@@ -12,7 +12,6 @@ export const App: FC = () => {
       <Htag tag="h2">Lorem ipsum dolor sit amet, consectetur adipisicing.</Htag>
       <Htag tag="h3">Lorem ipsum dolor sit amet, consectetur adipisicing.</Htag>
       <Htag tag="h4">Lorem ipsum dolor sit amet, consectetur adipisicing.</Htag>
-
       <P size="l" bold>
         Lorem ipsum dolor sit amet consectetur.
       </P>
@@ -20,13 +19,26 @@ export const App: FC = () => {
       <P size="s">Lorem ipsum dolor sit amet consectetur.</P>
       <P size="xs">Lorem ipsum dolor sit amet consectetur.</P>
       <P size="tinny">Lorem ipsum dolor sit amet consectetur.</P>
-
-      <Button appearance={Appearance.Disable}>Disable</Button>
-      <Button appearance={Appearance.DisableSecondary}>Disable</Button>
-      <Button appearance={Appearance.Icon}>Icon</Button>
-      <Button appearance={Appearance.Primary}>Primary</Button>
-      <Button appearance={Appearance.Secondary}>Secondary</Button>
-      <Button appearance={Appearance.Shop}>Shop</Button>
+      <div>
+        <Button appearance={Appearance.Icon}>Icon</Button>
+        <Button appearance={Appearance.Primary}>Primary</Button>
+        <Button appearance={Appearance.Secondary}>Secondary</Button>
+        <Button appearance={Appearance.Shop}>Shop</Button>
+      </div>
+      <div>
+        <Button appearance={Appearance.Icon} disabled>
+          Icon
+        </Button>
+        <Button appearance={Appearance.Primary} disabled>
+          Primary
+        </Button>
+        <Button appearance={Appearance.Secondary} disabled>
+          Secondary
+        </Button>
+        <Button appearance={Appearance.Shop} disabled>
+          Shop
+        </Button>
+      </div>
     </div>
   )
 }
