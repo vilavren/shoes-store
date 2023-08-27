@@ -2,6 +2,7 @@ import React, { FC } from 'react'
 
 import { Button } from './components/Button/Button'
 import { Appearance } from './components/Button/Button.props'
+import { CheckBox } from './components/CheckBox/CheckBox'
 import { Htag } from './components/Htag/Htag'
 import { P } from './components/P/P'
 
@@ -38,6 +39,16 @@ export const App: FC = () => {
         <Button appearance={Appearance.Shop} disabled>
           Shop
         </Button>
+
+        <CheckBox type="radio" />
+        <CheckBox type="radio" name="number">
+          One
+        </CheckBox>
+        <CheckBox type="radio" name="number">
+          Two
+        </CheckBox>
+        <CheckBox type="checkbox" />
+        <CheckBox type="checkbox">Lorem ipsum dolor sit amet. </CheckBox>
       </div>
     </div>
   )

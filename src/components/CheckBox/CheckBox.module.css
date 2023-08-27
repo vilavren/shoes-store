@@ -1,0 +1,93 @@
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+.label {
+	display: inline-flex;
+
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	color: var(--dark-gray-medium);
+	letter-spacing: 0.25px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: none;
+}
+
+.checkmark {
+	cursor: pointer;
+
+	position: relative;
+
+	display: inline-block;
+
+	width: 22px;
+	height: 22px;
+	margin-right: 10px;
+
+	border: 1px solid #ccc;
+
+	transition: border 0.4s ease-in-out, background-color 0.4s ease-in-out;
+}
+
+.checkmark:hover {
+	border: 1px solid var(--primary);
+}
+
+.checkbox {
+	border-radius: 5px;
+}
+
+.radio {
+	border-radius: 50%;
+}
+
+input[type="checkbox"]:checked+.checkbox {
+	background-color: var(--primary);
+	border: 1px solid var(--primary);
+}
+
+input[type="checkbox"]:checked+.checkmark::before {
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	width: 20px;
+	height: 20px;
+
+	background-image: url('./checked.svg');
+	background-size: contain;
+
+	animation: fade-in 0.4s ease-in-out;
+}
+
+input[type="radio"]:checked+.radio {
+	border: 1px solid var(--primary);
+}
+
+input[type="radio"]:checked+.checkmark::before {
+	content: "";
+
+	position: absolute;
+	top: 15%;
+	left: 15%;
+
+	width: 70%;
+	height: 70%;
+
+	background-color: var(--primary);
+	border-radius: 50%;
+
+	animation: fade-in 0.4s ease-in-out;
+}
