@@ -1,8 +1,6 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 
 export enum Appearance {
-  Disable = 'disable',
-  DisableSecondary = 'disable-secondary',
   Icon = 'icon',
   Primary = 'primary',
   Secondary = 'secondary',
