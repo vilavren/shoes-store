@@ -14,6 +14,8 @@ button:disabled {
   letter-spacing: 0.75px;
 
   border-radius: 8px;
+
+  transition: 0.3s;
 }
 
 .buttonIcon,
@@ -27,12 +29,45 @@ button:disabled {
   background-color: var(--tertiary);
 }
 
+.buttonIcon span {
+  position: relative;
+}
+
+.buttonIcon:hover span {
+  transform: scale(1.2);
+}
+
+.buttonIcon span::before {
+  content: "";
+
+  position: absolute;
+  top: 3px;
+  left: -19px;
+
+  width: 12px;
+  height: 12px;
+
+  background-image: url("./addIcon.svg");
+  background-size: contain;
+}
+
+.buttonIcon:hover:enabled span::before {
+  transform: scale(1.2);
+  transition: 0.1s;
+}
+
 .buttonSecondary {
   color: var(--primary);
   background-color: var(--light-gray-light);
 }
 
-.buttonSecondary:hover {
+.buttonSecondary:disabled {
+  color: var(--primary);
+  opacity: 0.5;
+  border: 1px solid var(--primary);
+}
+
+.buttonSecondary:hover:enabled {
   color: var(--primary);
   background-color: var(--secondary);
 }
@@ -51,10 +86,4 @@ button:disabled {
 .buttonShop:disabled {
   color: var(--light-gray-light);
   background-color: var(--light-gray);
-}
-
-.buttonSecondary:disabled {
-  color: var(--primary);
-  opacity: 0.5;
-  border: 1px solid var(--primary);
 }

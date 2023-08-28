@@ -19,59 +19,7 @@ export const Button: FC<ButtonProps> = ({
       })}
       {...props}
     >
-      {children}
+      <span>{children}</span>
     </button>
   )
-  // switch (appearance) {
-  //   case Appearance.Disable: {
-  //     return (
-  //       <button className={cn(styles.button, styles.buttonDisable)} {...props}>
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   case Appearance.DisableSecondary: {
-  //     return (
-  //       <button
-  //         className={cn(styles.button, styles.buttonDisableSecondary)}
-  //         {...props}
-  //       >
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   case Appearance.Icon: {
-  //     return (
-  //       <button className={cn(styles.button, styles.buttonIcon)} {...props}>
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   case Appearance.Primary: {
-  //     return (
-  //       <button className={cn(styles.button, styles.buttonPrimary)} {...props}>
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   case Appearance.Secondary: {
-  //     return (
-  //       <button
-  //         className={cn(styles.button, styles.buttonSecondary)}
-  //         {...props}
-  //       >
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   case Appearance.Shop: {
-  //     return (
-  //       <button className={cn(styles.button, styles.buttonShop)} {...props}>
-  //         {children}
-  //       </button>
-  //     )
-  //   }
-  //   default:
-  //     return <></>
-  // }
 }
