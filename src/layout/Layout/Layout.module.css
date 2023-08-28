@@ -5,7 +5,7 @@
 		". sidebar sidebar ." auto
 		". body body ." auto
 		"footer footer footer footer" auto /
-		auto 230px minmax(320px, 1200px) auto;
+		auto 210px minmax(320px, 1200px) auto;
 	gap: 40px 30px;
 	min-height: 100vh;
 }

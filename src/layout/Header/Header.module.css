@@ -1,0 +1,16 @@
+.header {
+	display: flex;
+	align-items: center;
+	padding: 45px 100px;
+}
+
+.logo {
+	width: 33px;
+	margin-right: 8px;
+}
+
+.header h1 {
+	font-size: 36px;
+	font-weight: 600;
+	color: var(--primary, #C92071);
+}
