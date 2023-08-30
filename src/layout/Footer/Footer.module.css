@@ -1,0 +1,6 @@
+.footer {
+  height: 454px;
+  padding: 22px 100px;
+  color: var(--white);
+  background-color: var(--dark-gray);
+}
