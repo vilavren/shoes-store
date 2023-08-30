@@ -1,6 +1,7 @@
 import cn from 'classnames'
 import React, { FC } from 'react'
 
+import { ReactComponent as Icon } from './addIcon.svg'
 import styles from './Button.module.css'
 import { ButtonProps, Appearance } from './Button.props'
 
@@ -19,7 +20,8 @@ export const Button: FC<ButtonProps> = ({
       })}
       {...props}
     >
-      <span>{children}</span>
+      {appearance === Appearance.Icon && <Icon />}
+      {children}
     </button>
   )
 }
