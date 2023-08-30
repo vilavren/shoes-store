@@ -29,31 +29,11 @@ button:disabled {
   background-color: var(--tertiary);
 }
 
-.buttonIcon span {
+.buttonIcon svg {
   position: relative;
-}
-
-.buttonIcon:hover span {
-  transform: scale(1.2);
-}
-
-.buttonIcon span::before {
-  content: "";
-
-  position: absolute;
-  top: 3px;
-  left: -19px;
-
+  right: 8px;
   width: 12px;
   height: 12px;
-
-  background-image: url("./addIcon.svg");
-  background-size: contain;
-}
-
-.buttonIcon:hover:enabled span::before {
-  transform: scale(1.2);
-  transition: 0.1s;
 }
 
 .buttonSecondary {
