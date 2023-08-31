@@ -4,3 +4,21 @@
   color: var(--white);
   background-color: var(--dark-gray);
 }
+
+.footerContainer {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footerColumns {
+  display: flex;
+  justify-content: center;
+}
+
+.footerColumn:first-child {
+  flex: 1 1 100%;
+}
+
+.columnLogo {
+  font-size: 36px;
+}
