@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 import { Input } from '../Input/Input'
 
-import GlassIcon from './glass.svg'
+import { ReactComponent as GlassIcon } from './glass.svg'
 import styles from './Search.module.css'
 import { SearchProps } from './Search.props'
 
