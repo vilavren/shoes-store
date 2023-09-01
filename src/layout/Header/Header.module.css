@@ -16,4 +16,23 @@
 	color: var(--primary, #C92071);
 }
 
-.search {}
+.search {
+	margin-right: 48px;
+}
+
+.link {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	color: var(--dark-gray-medium);
+
+	transition: color 0.4s ease-in-out;
+}
+
+.link:hover {
+	color: var(--primary);
+}
+
+.button {
+	margin-right: 70px;
+}
