@@ -5,10 +5,10 @@ import { Button } from '../../components/Button/Button'
 import { Appearance } from '../../components/Button/Button.props'
 import { Search } from '../../components/Search/Search'
 
-import { ReactComponent as Cart } from './cart.svg'
 import styles from './Header.module.css'
 import { HeaderProps } from './Header.props'
-import { ReactComponent as Logo } from './logo.svg'
+import { ReactComponent as Cart } from './icon/cart.svg'
+import { ReactComponent as Logo } from './icon/logo.svg'
 
 export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
   return (
@@ -22,7 +22,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
       <Button className={styles.button} appearance={Appearance.Primary}>
         Войти
       </Button>
-      <Cart />
+      <Cart className={styles.cartIcon} />
     </header>
   )
 }
