@@ -10,17 +10,17 @@ export const SideBar = ({ className, ...props }: SideBarProps): JSX.Element => {
   return (
     <div className={cn(className, styles.sideBar)} {...props}>
       <nav>
-        <ul className={styles.sideBarItems}>
-          <li>
+        <ul className={styles.items}>
+          <li className={styles.item}>
             <Span size="s-16">Главная</Span>
           </li>
-          <li>
+          <li className={styles.item}>
             <Span size="s-16">Товары</Span>
           </li>
-          <li>
+          <li className={styles.item}>
             <Span size="s-16">Категории</Span>
           </li>
-          <li>
+          <li className={styles.item}>
             <Span size="s-16">Заказы</Span>
           </li>
         </ul>
