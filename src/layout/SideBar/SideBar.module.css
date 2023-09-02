@@ -1,3 +1,7 @@
+.sideBar {
+	margin-bottom: 30px;
+}
+
 .items {
 	display: flex;
 	gap: 32px;
@@ -5,6 +9,7 @@
 
 .item {
 	position: relative;
+	transition: color 0.4s ease-in-out;
 }
 
 .item::after {
@@ -21,6 +26,10 @@
 	background-color: var(--primary);
 
 	transition: transform 0.4s ease-in-out;
+}
+
+.item:hover {
+	color: var(--primary);
 }
 
 .item:hover::after {
