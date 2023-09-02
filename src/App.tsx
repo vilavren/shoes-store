@@ -6,12 +6,14 @@ import { CheckBox } from './components/CheckBox/CheckBox'
 import { Htag } from './components/Htag/Htag'
 import { P } from './components/P/P'
 import { Search } from './components/Search/Search'
+import Slider from './components/Slider/Slider'
 import { Layout } from './layout/Layout/Layout'
 
 export const App: FC = () => {
   return (
     <Layout>
       <div>
+        <Slider />
         <Htag tag="h1">
           Lorem ipsum dolor sit amet, consectetur adipisicing.
         </Htag>
