@@ -7,11 +7,12 @@ export interface ISlider {
   img: string
 }
 
-export async function getProducts(): Promise<any> {
+export async function getProducts(): Promise<ISlider[]> {
   try {
     const data = await fetchData()
     return data
   } catch (error) {
     console.error(error)
+    throw error
   }
 }

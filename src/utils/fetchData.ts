@@ -1,10 +1,11 @@
 import { API } from '../api/slider'
 
-export function fetchData(): Promise<any> {
-  return new Promise((resolve, reject) => {
+import { ISlider } from './getProducts'
+
+export function fetchData(): Promise<ISlider[]> {
+  return new Promise((resolve) => {
     setTimeout(() => {
       resolve(API.slider)
     }, 1000)
-    reject(new Error('Some error occurred.'))
   })
 }

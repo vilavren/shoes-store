@@ -37,7 +37,7 @@ const Slider = ({
   autoPlay,
   autoPlayTime,
 }: SliderProps): JSX.Element => {
-  const [items, setItems] = useState<Iimage[]>([])
+  const [items, setItems] = useState<ISlider[]>([])
   const [slide, setSlide] = useState(0)
   const [touchPosition, setTouchPosition] = useState<number | null>(null)
 
@@ -45,6 +45,7 @@ const Slider = ({
     const loadData = async () => {
       // Поменять на API
       const images: ISlider[] = await getProducts()
+      console.log('images:', images)
       setItems(images)
     }
     loadData()

@@ -13,8 +13,8 @@ export const SlidesList = (): JSX.Element => {
       className="slide-list"
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
-      {items.map((i: ) => (
-        <Slide key={i.is} data={i.s} />
+      {items.map((i) => (
+        <Slide key={i.id} item={i} />
       ))}
     </div>
   )
