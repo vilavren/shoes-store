@@ -1,18 +1,19 @@
 import cn from 'classnames'
-import React, { FC } from 'react'
+import React from 'react'
 
 import { ReactComponent as Icon } from './addIcon.svg'
 import styles from './Button.module.css'
 import { ButtonProps, Appearance } from './Button.props'
 
-export const Button: FC<ButtonProps> = ({
-  children,
+export const Button = ({
   appearance,
+  children,
+  className,
   ...props
-}): JSX.Element => {
+}: ButtonProps): JSX.Element => {
   return (
     <button
-      className={cn(styles.button, {
+      className={cn(styles.button, className, {
         [styles.buttonIcon]: appearance === Appearance.Icon,
         [styles.buttonPrimary]: appearance === Appearance.Primary,
         [styles.buttonSecondary]: appearance === Appearance.Secondary,

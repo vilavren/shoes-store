@@ -1,16 +1,50 @@
 .header {
 	display: flex;
 	align-items: center;
-	padding: 45px 100px;
+	justify-content: space-between;
+
+	margin-bottom: 40px;
+	padding-top: 34px;
 }
 
 .logo {
 	width: 33px;
+	height: 33px;
 	margin-right: 8px;
 }
 
-.header h1 {
+.title {
+	margin-right: 27px;
+
 	font-size: 36px;
 	font-weight: 600;
 	color: var(--primary, #c92071);
+	white-space: nowrap;
+}
+
+.search {
+	margin-right: 48px;
+}
+
+.link {
+	margin-right: 30px;
+
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 28px;
+	color: var(--dark-gray-medium);
+
+	transition: color 0.4s ease-in-out;
+}
+
+.link:hover {
+	color: var(--primary);
+}
+
+.button {
+	margin-right: 70px;
+}
+
+.cartIcon:hover {
+	stroke: var(--tertiary);
 }

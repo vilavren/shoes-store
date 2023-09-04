@@ -5,6 +5,7 @@ import { Appearance } from './components/Button/Button.props'
 import { CheckBox } from './components/CheckBox/CheckBox'
 import { Htag } from './components/Htag/Htag'
 import { P } from './components/P/P'
+import { Search } from './components/Search/Search'
 import { Layout } from './layout/Layout/Layout'
 
 export const App: FC = () => {
@@ -59,6 +60,7 @@ export const App: FC = () => {
           </CheckBox>
           <CheckBox type="checkbox" />
           <CheckBox type="checkbox">Lorem ipsum dolor sit amet. </CheckBox>
+          <Search />
         </div>
       </div>
     </Layout>
