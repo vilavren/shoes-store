@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ISlider } from '../../../utils/getProducts'
+import { ISlider } from '../../../interfaces/slider.interfaces'
 
 import { SlideImage } from './SlideImage'
 import { SlideTitle } from './SlideTitle'
@@ -14,7 +14,7 @@ interface SlideProps {
 export const Slide = ({ item }: SlideProps): JSX.Element => {
   return (
     <div className="slide">
-      <SlideImage src={item.img} alt={item.title} />
+      <SlideImage src={`http://localhost:3333${item.img}`} alt={item.title} />
       <SlideTitle title={item.title} />
     </div>
   )

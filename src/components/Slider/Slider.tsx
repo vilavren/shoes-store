@@ -2,7 +2,8 @@ import React, { useEffect, useState, createContext } from 'react'
 
 import '../Slider/slider.css'
 
-import { getProducts, ISlider } from '../../utils/getProducts'
+import { ISlider } from '../../interfaces/slider.interfaces'
+import { getProducts } from '../../utils/getProducts'
 
 import { Dots } from './components/controls/Dots/Dots'
 import { SlidesList } from './components/SlidesList'
@@ -43,7 +44,6 @@ const Slider = ({
 
   useEffect(() => {
     const loadData = async () => {
-      // Поменять на API
       const images: ISlider[] = await getProducts()
       console.log('images:', images)
       setItems(images)

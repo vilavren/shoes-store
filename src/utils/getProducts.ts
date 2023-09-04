@@ -1,16 +1,9 @@
-import { fetchData } from './fetchData'
-
-export interface ISlider {
-  id: number
-  title: string
-  price: number
-  img: string
-}
+import { ISlider } from '../interfaces/slider.interfaces'
 
 export async function getProducts(): Promise<ISlider[]> {
   try {
-    const data = await fetchData()
-    return data
+    const res = await fetch('http://localhost:3333/products')
+    return res.json()
   } catch (error) {
     console.error(error)
     throw error
