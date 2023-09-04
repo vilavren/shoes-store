@@ -19,27 +19,72 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
             </P>
           </div>
           <div className={styles.footerColumn}>
-            <P size="m" className={styles.columnTitle}>
-              Informação
-            </P>
-            <ul></ul>
-          </div>
-          <div className={styles.footerColumn}>
-            <P size="m" className={styles.columnTitle}>
-              Categorias
-            </P>
-            <ul></ul>
-          </div>
-          <div className={styles.footerColumn}>
-            <P size="m" className={styles.columnTitle}>
-              Contato
+            <P bold={true} size="m" className={styles.columnTitle}>
+              Информация
             </P>
             <ul>
               <li>
-                Av. Santos Dumont, 1510 - 1 andar - Aldeota, Fortaleza - CE,
-                60150-161
+                <a href="#">О магазине</a>
               </li>
-              <li>(85) 3051-3411</li>
+              <li>
+                <a href="#">Конфиденциальность</a>
+              </li>
+              <li>
+                <a href="#">Список покупок</a>
+              </li>
+              <li>
+                <a href="#">Блог</a>
+              </li>
+              <li>
+                <a href="#">Работать с нами</a>
+              </li>
+              <li>
+                <a href="#">Мои запросы</a>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.footerColumn}>
+            <P bold={true} size="m" className={styles.columnTitle}>
+              Категории
+            </P>
+            <ul>
+              <li>
+                <a href="#">Футболки</a>
+              </li>
+              <li>
+                <a href="#">Брюки</a>
+              </li>
+              <li>
+                <a href="#">Головные уборы</a>
+              </li>
+              <li>
+                <a href="#">Наушники</a>
+              </li>
+              <li>
+                <a href="#">Тенис</a>
+              </li>
+            </ul>
+          </div>
+          <div className={styles.footerColumn}>
+            <P bold={true} size="m" className={styles.columnTitle}>
+              Контакты
+            </P>
+            <ul>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="#"></a>
+              </li>
+              <li>
+                <a href="tel:(85)3051-3411">(85) 3051-3411</a>
+              </li>
             </ul>
           </div>
         </div>
