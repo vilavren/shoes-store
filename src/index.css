@@ -1,22 +1,23 @@
 :root {
-	--primary: #C92071;
-	--secondary: #B5B6F2;
+	--primary: #c92071;
+	--secondary: #b5b6f2;
 	--tertiary: #991956;
-	--error: #EE4266;
-	--success: #52CA76;
-	--warning: #F6AA1C;
-	--dark-gray: #1F1F1F;
+	--error: #ee4266;
+	--success: #52ca76;
+	--warning: #f6aa1c;
+	--dark-gray: #1f1f1f;
 	--dark-gray-medium: #474747;
 	--dark-gray-light: #666;
-	--light-gray: #8F8F8F;
-	--light-gray-medium: #CCC;
-	--light-gray-light: #F5F5F5;
+	--light-gray: #8f8f8f;
+	--light-gray-medium: #ccc;
+	--light-gray-light: #f5f5f5;
+	--white: #fff;
 }
 
 body {
 	margin: 0;
 	font-family: Inter, sans-serif;
-	color: var(--dark-gray)
+	color: var(--dark-gray);
 }
 
 * {
@@ -31,7 +32,6 @@ body {
 	box-sizing: border-box;
 }
 
-
 a,
 a:link,
 a:visited {
@@ -41,7 +41,6 @@ a:visited {
 a:hover {
 	text-decoration: none;
 }
-
 
 aside,
 nav,
