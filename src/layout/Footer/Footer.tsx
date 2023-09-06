@@ -2,21 +2,47 @@ import cn from 'classnames'
 import React from 'react'
 
 import { P } from '../../components/P/P'
+import { ReactComponent as Logo } from '../Header/icon/logo.svg'
 
 import styles from './Footer.module.css'
 import { FooterProps } from './Footer.props'
+import { ReactComponent as Facebook } from './icon/face.svg'
+import { ReactComponent as Instagram } from './icon/inst.svg'
+import { ReactComponent as Twitter } from './icon/twit.svg'
 
 export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
   return (
     <footer className={cn(className, styles.footer)} {...props}>
       <div className={styles.footerContainer}>
         <div className={styles.footerColumns}>
-          <div className={styles.footerColumn}>
-            <div className={styles.columnLogo}>Digital Store</div>
-            <P size="s">
+          <div className={styles.footerColumnMain}>
+            <div className={styles.logo}>
+              <Logo className={styles.logoSvg} />
+              <span className={styles.logoText}>Digital Store</span>
+            </div>
+            <P className={styles.text} size="s">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore.
             </P>
+            <div className={styles.social}>
+              <ul>
+                <li className={styles.socialItem}>
+                  <a href="#">
+                    <Facebook className={styles.socialSvg} />
+                  </a>
+                </li>
+                <li className={styles.socialItem}>
+                  <a href="#">
+                    <Instagram className={styles.socialSvg} />
+                  </a>
+                </li>
+                <li className={styles.socialItem}>
+                  <a href="#">
+                    <Twitter className={styles.socialSvg} />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
@@ -78,6 +104,7 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
           </div>
         </div>
       </div>
+      <div className={styles.footerCopyright}>2023 Digital Store</div>
     </footer>
   )
 }
