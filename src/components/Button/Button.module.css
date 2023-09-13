@@ -17,6 +17,10 @@ button:disabled {
   transition: 0.3s;
 }
 
+.button:focus {
+  box-shadow: rgb(107 107 107 / 80%) 0 7px 15px 0;
+}
+
 .buttonIcon,
 .buttonPrimary {
   color: var(--light-gray-light);
