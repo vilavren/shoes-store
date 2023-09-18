@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import styles from './Span.module.css'
 import { SpanProps } from './Span.props'

@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import styles from './Input.module.css'
 import { InputProps } from './Input.props'
