@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import { Span } from '../../components/Span/Span'
 

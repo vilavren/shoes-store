@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import { P } from '../../components/P/P'
 import { ReactComponent as Logo } from '../Header/icon/logo.svg'

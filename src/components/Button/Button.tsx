@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import { ReactComponent as Icon } from './addIcon.svg'
 import styles from './Button.module.css'

@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import styles from './P.module.css'
 import { PProps } from './P.props'
