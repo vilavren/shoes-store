@@ -1,11 +1,8 @@
-import React from 'react'
-
 import { ISlider } from '../../../interfaces/slider.interfaces'
+import styles from '../../Slider/slider.module.css'
 
 import { SlideImage } from './SlideImage'
 import { SlideTitle } from './SlideTitle'
-
-import '../../Slider/slider.css'
 
 interface SlideProps {
   item: ISlider
@@ -13,9 +10,12 @@ interface SlideProps {
 
 export const Slide = ({ item }: SlideProps): JSX.Element => {
   return (
-    <div className="slide">
-      <SlideImage src={`http://localhost:3333${item.img}`} alt={item.title} />
-      <SlideTitle title={item.title} />
+    <div className={styles.slide}>
+      <SlideImage
+        src={`${import.meta.env.VITE_API_URI}/slider${item.imgSrc}`}
+        alt={item.title}
+      />
+      <SlideTitle>{item.title}&#128293;</SlideTitle>
     </div>
   )
 }

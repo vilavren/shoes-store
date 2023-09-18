@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
-import '../../Slider/slider.css'
-import { SliderContext } from '../Slider'
+import styles from '../../Slider/slider.module.css'
+import { SliderContext } from '../slider.context'
 
 import { Slide } from './Slide'
 
@@ -10,7 +10,7 @@ export const SlidesList = (): JSX.Element => {
 
   return (
     <div
-      className="slide-list"
+      className={styles.slideList}
       style={{ transform: `translateX(-${slideNumber * 100}%)` }}
     >
       {items.map((i) => (

@@ -1,14 +1,17 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
-import './dots.css'
-import { SliderContext } from '../../../Slider'
+import { SliderContext } from '../../../slider.context'
+
+import styles from './dots.module.css'
 
 export const Dot = ({ number }: { number: number }): JSX.Element => {
   const { goToSlide, slideNumber } = useContext(SliderContext)
 
   return (
     <div
-      className={`dot ${slideNumber === number ? 'selected' : ''}`}
+      className={`${styles.dot} ${
+        slideNumber === number ? styles.selected : ''
+      }`}
       onClick={() => goToSlide && goToSlide(number)}
     />
   )

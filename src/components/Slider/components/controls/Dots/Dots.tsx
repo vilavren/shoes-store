@@ -1,9 +1,9 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 
-import { SliderContext } from '../../../Slider'
+import { SliderContext } from '../../../slider.context'
 
-import './dots.css'
 import { Dot } from './Dot'
+import styles from './dots.module.css'
 
 export const Dots = (): JSX.Element => {
   const { slidesCount } = useContext(SliderContext)
@@ -17,5 +17,5 @@ export const Dots = (): JSX.Element => {
     return dots
   }
 
-  return <div className="dots">{renderDots()}</div>
+  return <div className={styles.dots}>{renderDots()}</div>
 }

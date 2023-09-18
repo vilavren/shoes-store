@@ -1,11 +1,11 @@
-import React from 'react'
+import { ReactNode } from 'react'
 
-import '../../Slider/slider.css'
+import styles from '../../Slider/slider.module.css'
 
 interface SlideTitleProps {
-  title: string
+  children: ReactNode
 }
 
-export const SlideTitle = ({ title }: SlideTitleProps) => {
-  return <div className="slide-title">{title}</div>
+export const SlideTitle = ({ children }: SlideTitleProps) => {
+  return <h2 className={styles.slideTitle}>{children}</h2>
 }

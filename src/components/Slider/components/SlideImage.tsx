@@ -1,6 +1,4 @@
-import React from 'react'
-
-import '../../Slider/slider.css'
+import styles from '../../Slider/slider.module.css'
 
 interface SlideImageProps {
   src: string
@@ -8,5 +6,5 @@ interface SlideImageProps {
 }
 
 export const SlideImage = ({ src, alt }: SlideImageProps): JSX.Element => {
-  return <img src={src} alt={alt} className="slide-image" />
+  return <img src={src} alt={alt} className={styles.slideImage} />
 }

@@ -1,42 +1,21 @@
-import React, { useEffect, useState, createContext } from 'react'
-
-import '../Slider/slider.css'
+import { useEffect, useState, useCallback } from 'react'
 
 import { ISlider } from '../../interfaces/slider.interfaces'
-import { getProducts } from '../../utils/getProducts'
+import { getData } from '../../utils/getData'
+import styles from '../Slider/slider.module.css'
 
 import { Dots } from './components/controls/Dots/Dots'
 import { SlidesList } from './components/SlidesList'
+import { SliderContext } from './slider.context'
 
 interface SliderProps {
-  autoPlay: boolean
-  autoPlayTime: number
-  width: string
-  height: string
+  autoPlay?: boolean
+  autoPlayTime?: number
 }
 
-export interface ISlideContextProps {
-  goToSlide?: (number: number) => void
-  changeSlide?: (direction?: number | undefined) => void | undefined
-  slidesCount: number
-  slideNumber: number
-  items: ISlider[]
-}
-
-const sliderContextValue = {
-  slidesCount: 0,
-  slideNumber: 0,
-  items: [],
-}
-
-export const SliderContext =
-  createContext<ISlideContextProps>(sliderContextValue)
-
-const Slider = ({
-  width,
-  height,
-  autoPlay,
-  autoPlayTime,
+export const Slider = ({
+  autoPlay = false,
+  autoPlayTime = 5000,
 }: SliderProps): JSX.Element => {
   const [items, setItems] = useState<ISlider[]>([])
   const [slide, setSlide] = useState(0)
@@ -44,24 +23,26 @@ const Slider = ({
 
   useEffect(() => {
     const loadData = async () => {
-      const images: ISlider[] = await getProducts()
-      console.log('images:', images)
+      const images: ISlider[] = await getData('/slider')
       setItems(images)
     }
     loadData()
   }, [])
 
-  const changeSlide = (direction = 1) => {
-    let slideNumber = 0
+  const changeSlide = useCallback(
+    (direction = 1) => {
+      let slideNumber = 0
 
-    if (slide + direction < 0) {
-      slideNumber = items.length - 1
-    } else {
-      slideNumber = (slide + direction) % items.length
-    }
+      if (slide + direction < 0) {
+        slideNumber = items.length - 1
+      } else {
+        slideNumber = (slide + direction) % items.length
+      }
 
-    setSlide(slideNumber)
-  }
+      setSlide(slideNumber)
+    },
+    [slide, items.length]
+  )
 
   const goToSlide = (number: number) => {
     setSlide(number % items.length)
@@ -102,12 +83,11 @@ const Slider = ({
     return () => {
       clearInterval(interval)
     }
-  }, [items.length, slide])
+  }, [autoPlay, autoPlayTime, changeSlide, items.length, slide])
 
   return (
     <div
-      style={{ width, height }}
-      className="slider"
+      className={styles.slider}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
     >
@@ -126,11 +106,3 @@ const Slider = ({
     </div>
   )
 }
-
-Slider.defaultProps = {
-  autoPlay: false,
-  autoPlayTime: 5000,
-  width: '100%',
-  height: '100%',
-}
-export default Slider
