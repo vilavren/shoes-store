@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import { Button } from '../../components/Button/Button'
 import { Appearance } from '../../components/Button/Button.props'

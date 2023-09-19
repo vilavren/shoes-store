@@ -1,5 +1,4 @@
 import cn from 'classnames'
-import React from 'react'
 
 import styles from './CheckBox.module.css'
 import { CheckBoxProps } from './CheckBox.props'
