@@ -4,7 +4,7 @@ import { P } from '../../components/P/P'
 import { ReactComponent as Logo } from '../Header/icon/logo.svg'
 
 import { LinkItem } from './components/LinkItem/LinkItem'
-import { info } from './components/listItem'
+import { categories, info } from './components/listItem'
 import styles from './Footer.module.css'
 import { FooterProps } from './Footer.props'
 import { ReactComponent as Facebook } from './icon/face.svg'
@@ -75,7 +75,8 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
             <P bold={true} size="m" className={styles.columnTitle}>
               Категории
             </P>
-            <ul>
+            <LinkItem items={categories} size="s-16" />
+            {/* <ul>
               <li>
                 <a href="#">Футболки</a>
               </li>
@@ -91,7 +92,7 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
               <li>
                 <a href="#">Тенис</a>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
