@@ -1,6 +1,7 @@
 import cn from 'classnames'
 
 import { P } from '../../components/P/P'
+import { Span } from '../../components/Span/Span'
 import { ReactComponent as Logo } from '../Header/icon/logo.svg'
 
 import { LinkItem } from './components/LinkItem/LinkItem'
@@ -14,6 +15,9 @@ import { ReactComponent as Twitter } from './icon/twit.svg'
 export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
   return (
     <footer className={cn(className, styles.footer)} {...props}>
+      <Span size="l-24" bold={true}>
+        123
+      </Span>
       <div className={styles.footerContainer}>
         <div className={styles.footerColumns}>
           <div className={styles.footerColumnMain}>
@@ -50,49 +54,12 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
               Информация
             </P>
             <LinkItem items={info} size="s-16" />
-            {/* <ul>
-            <li>
-                <a href="#">О магазине</a>
-              </li>
-              <li>
-                <a href="#">Конфиденциальность</a>
-              </li>
-              <li>
-                <a href="#">Список покупок</a>
-              </li>
-              <li>
-                <a href="#">Блог</a>
-              </li>
-              <li>
-                <a href="#">Работать с нами</a>
-              </li>
-              <li>
-                <a href="#">Мои запросы</a>
-              </li>
-            </ul> */}
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
               Категории
             </P>
             <LinkItem items={categories} size="s-16" />
-            {/* <ul>
-              <li>
-                <a href="#">Футболки</a>
-              </li>
-              <li>
-                <a href="#">Брюки</a>
-              </li>
-              <li>
-                <a href="#">Головные уборы</a>
-              </li>
-              <li>
-                <a href="#">Наушники</a>
-              </li>
-              <li>
-                <a href="#">Тенис</a>
-              </li>
-            </ul> */}
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
