@@ -1,7 +1,6 @@
 import cn from 'classnames'
 
 import { P } from '../../components/P/P'
-import { Span } from '../../components/Span/Span'
 import { ReactComponent as Logo } from '../Header/icon/logo.svg'
 
 import { LinkItem } from './components/LinkItem/LinkItem'
@@ -15,9 +14,6 @@ import { ReactComponent as Twitter } from './icon/twit.svg'
 export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
   return (
     <footer className={cn(className, styles.footer)} {...props}>
-      <Span size="l-24" bold={true}>
-        123
-      </Span>
       <div className={styles.footerContainer}>
         <div className={styles.footerColumns}>
           <div className={styles.footerColumnMain}>
