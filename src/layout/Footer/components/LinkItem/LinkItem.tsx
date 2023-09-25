@@ -5,11 +5,11 @@ import { ListProps } from './LinkItem.props'
 export const LinkItem = ({ items, size, bold }: ListProps): JSX.Element => {
   return (
     <ul>
-      {items.map((el) => (
+      {items.map(([title, link = '#']) => (
         <li>
-          <a href={el[1]}>
+          <a href={link}>
             <Span size={size} bold={bold}>
-              {el[0]}
+              {title}
             </Span>
           </a>
         </li>
