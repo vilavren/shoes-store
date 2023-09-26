@@ -69,22 +69,22 @@
   line-height: 26px;
 }
 
-.footer a {
+.listItem {
   position: relative;
   line-height: 38px;
   color: var(--white);
   white-space: nowrap;
 }
 
-.footer a:hover {
+.listItem:hover {
   color: var(--primary);
 }
 
-.footer a::after {
+.listItem::after {
   content: "";
 
   position: absolute;
-  bottom: -5px;
+  bottom: -6px;
   left: 0;
   transform: scale(0);
 
@@ -96,9 +96,14 @@
   transition: transform 0.4s ease-in-out;
 }
 
-.footer a:hover::after {
+.listItem:hover::after {
   transform: scale(1);
   transition: transform 0.4s;
+}
+
+.address {
+  line-height: normal;
+  white-space: wrap;
 }
 
 .socialItem {

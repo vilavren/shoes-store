@@ -62,9 +62,15 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
               Контакты
             </P>
             <ul>
-              <li>ул. Сантос Дамонт, 1510 - андар, 60150-161</li>
               <li>
-                <a href="tel:(85)3051-3411">(85) 3051-3411</a>
+                <a className={cn(styles.listItem, styles.address)} href="#">
+                  ул. Сантос Дамонт, 1510 - андар, 60150-161
+                </a>
+              </li>
+              <li>
+                <a className={styles.listItem} href="tel:(85)3051-3411">
+                  (85) 3051-3411
+                </a>
               </li>
             </ul>
           </div>
