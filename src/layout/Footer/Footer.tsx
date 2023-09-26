@@ -3,6 +3,8 @@ import cn from 'classnames'
 import { P } from '../../components/P/P'
 import { ReactComponent as Logo } from '../Header/icon/logo.svg'
 
+import { LinkItem } from './components/LinkItem/LinkItem'
+import { categories, info } from './components/listItem'
 import styles from './Footer.module.css'
 import { FooterProps } from './Footer.props'
 import { ReactComponent as Facebook } from './icon/face.svg'
@@ -47,57 +49,28 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
             <P bold={true} size="m" className={styles.columnTitle}>
               Информация
             </P>
-            <ul>
-              <li>
-                <a href="#">О магазине</a>
-              </li>
-              <li>
-                <a href="#">Конфиденциальность</a>
-              </li>
-              <li>
-                <a href="#">Список покупок</a>
-              </li>
-              <li>
-                <a href="#">Блог</a>
-              </li>
-              <li>
-                <a href="#">Работать с нами</a>
-              </li>
-              <li>
-                <a href="#">Мои запросы</a>
-              </li>
-            </ul>
+            <LinkItem items={info} size="s-16" />
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
               Категории
             </P>
-            <ul>
-              <li>
-                <a href="#">Футболки</a>
-              </li>
-              <li>
-                <a href="#">Брюки</a>
-              </li>
-              <li>
-                <a href="#">Головные уборы</a>
-              </li>
-              <li>
-                <a href="#">Наушники</a>
-              </li>
-              <li>
-                <a href="#">Тенис</a>
-              </li>
-            </ul>
+            <LinkItem items={categories} size="s-16" />
           </div>
           <div className={styles.footerColumn}>
             <P bold={true} size="m" className={styles.columnTitle}>
               Контакты
             </P>
             <ul>
-              <li>ул. Сантос Дамонт, 1510 - андар, 60150-161</li>
               <li>
-                <a href="tel:(85)3051-3411">(85) 3051-3411</a>
+                <a className={cn(styles.listItem, styles.address)} href="#">
+                  ул. Сантос Дамонт, 1510 - андар, 60150-161
+                </a>
+              </li>
+              <li>
+                <a className={styles.listItem} href="tel:(85)3051-3411">
+                  (85) 3051-3411
+                </a>
               </li>
             </ul>
           </div>
