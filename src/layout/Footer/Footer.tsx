@@ -46,19 +46,19 @@ export const Footer = ({ className, ...props }: FooterProps): JSX.Element => {
             </div>
           </div>
           <div className={styles.footerColumn}>
-            <P bold={true} size="m" className={styles.columnTitle}>
+            <P bold size="m" className={styles.columnTitle}>
               Информация
             </P>
             <LinkItem items={info} size="s-16" />
           </div>
           <div className={styles.footerColumn}>
-            <P bold={true} size="m" className={styles.columnTitle}>
+            <P bold size="m" className={styles.columnTitle}>
               Категории
             </P>
             <LinkItem items={categories} size="s-16" />
           </div>
           <div className={styles.footerColumn}>
-            <P bold={true} size="m" className={styles.columnTitle}>
+            <P bold size="m" className={styles.columnTitle}>
               Контакты
             </P>
             <ul>
