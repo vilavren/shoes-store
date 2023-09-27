@@ -22,7 +22,7 @@ export const Slide = ({ item }: SlideProps): JSX.Element => {
           Лучшие персональные предложения
         </P>
         <Htag tag="64px" bold className={styles.slideTitle}>
-          {item.title}&#128293;
+          {item.title}&nbsp;&#128293;
         </Htag>
         <Button appearance="primary" className={styles.button}>
           Посмотреть
