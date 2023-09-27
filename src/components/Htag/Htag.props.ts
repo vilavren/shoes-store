@@ -2,6 +2,7 @@ import { ReactNode } from 'react'
 
 export interface HtagProps
   extends React.HtmlHTMLAttributes<HTMLHeadingElement> {
-  tag: 'h1' | 'h2' | 'h3' | 'h4'
+  tag: '64px' | '48px' | '32px' | '28px'
+  bold?: boolean
   children: ReactNode
 }
