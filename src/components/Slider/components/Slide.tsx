@@ -1,6 +1,5 @@
 import { ISlider } from '../../../interfaces/slider.interfaces'
 import { Button } from '../../Button/Button'
-import { Appearance } from '../../Button/Button.props'
 import { Htag } from '../../Htag/Htag'
 import { P } from '../../P/P'
 import styles from '../../Slider/slider.module.css'
@@ -25,7 +24,7 @@ export const Slide = ({ item }: SlideProps): JSX.Element => {
         <Htag tag="64px" bold className={styles.slideTitle}>
           {item.title}&#128293;
         </Htag>
-        <Button appearance={Appearance.Primary} className={styles.button}>
+        <Button appearance="primary" className={styles.button}>
           Посмотреть
         </Button>
       </div>

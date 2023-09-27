@@ -1,11 +1,11 @@
 import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
 
-export enum Appearance {
-  Icon = 'icon',
-  Primary = 'primary',
-  Secondary = 'secondary',
-  Shop = 'shop',
-}
+// export enum Appearance {
+//   Icon = 'icon',
+//   Primary = 'primary',
+//   Secondary = 'secondary',
+//   Shop = 'shop',
+// }
 
 export interface ButtonProps
   extends DetailedHTMLProps<
@@ -13,5 +13,5 @@ export interface ButtonProps
     HTMLButtonElement
   > {
   children: ReactNode
-  appearance: Appearance
+  appearance: 'icon' | 'primary' | 'secondary' | 'shop'
 }

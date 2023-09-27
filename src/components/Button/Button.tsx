@@ -2,7 +2,7 @@ import cn from 'classnames'
 
 import { ReactComponent as Icon } from './addIcon.svg'
 import styles from './Button.module.css'
-import { ButtonProps, Appearance } from './Button.props'
+import { ButtonProps } from './Button.props'
 
 export const Button = ({
   appearance,
@@ -13,14 +13,14 @@ export const Button = ({
   return (
     <button
       className={cn(styles.button, className, {
-        [styles.buttonIcon]: appearance === Appearance.Icon,
-        [styles.buttonPrimary]: appearance === Appearance.Primary,
-        [styles.buttonSecondary]: appearance === Appearance.Secondary,
-        [styles.buttonShop]: appearance === Appearance.Shop,
+        [styles.buttonIcon]: appearance === 'icon',
+        [styles.buttonPrimary]: appearance === 'primary',
+        [styles.buttonSecondary]: appearance === 'secondary',
+        [styles.buttonShop]: appearance === 'shop',
       })}
       {...props}
     >
-      {appearance === Appearance.Icon && <Icon />}
+      {appearance === 'icon' && <Icon />}
       {children}
     </button>
   )

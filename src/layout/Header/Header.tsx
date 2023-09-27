@@ -1,7 +1,6 @@
 import cn from 'classnames'
 
 import { Button } from '../../components/Button/Button'
-import { Appearance } from '../../components/Button/Button.props'
 import { Search } from '../../components/Search/Search'
 
 import styles from './Header.module.css'
@@ -18,7 +17,7 @@ export const Header = ({ className, ...props }: HeaderProps): JSX.Element => {
       <a className={styles.link} href="#">
         Контакты
       </a>
-      <Button className={styles.button} appearance={Appearance.Primary}>
+      <Button className={styles.button} appearance="primary">
         Войти
       </Button>
       <Cart className={styles.cartIcon} />

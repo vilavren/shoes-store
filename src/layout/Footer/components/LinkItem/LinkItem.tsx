@@ -7,7 +7,7 @@ export const LinkItem = ({ items, size, bold }: ListProps): JSX.Element => {
   return (
     <ul>
       {items.map(([title, link = '#']) => (
-        <li>
+        <li key={title}>
           <a className={styles.listItem} href={link}>
             <Span size={size} bold={bold}>
               {title}
