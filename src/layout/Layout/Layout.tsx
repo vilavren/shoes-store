@@ -1,3 +1,4 @@
+import { Card, product } from '../../components/Card/Card'
 import { Footer } from '../Footer/Footer'
 import { Header } from '../Header/Header'
 import { SideBar } from '../SideBar/SideBar'
@@ -11,7 +12,10 @@ export const Layout = ({ children }: LayoutProps): JSX.Element => {
       <div className={styles.wrapper}>
         <Header className={styles.header} />
         <SideBar className={styles.sidebar} />
-        <div className={styles.body}>{children}</div>
+        <div className={styles.body}>
+          {children}
+          <Card product={product} />
+        </div>
         <Footer className={styles.footer} />
       </div>
     </main>
