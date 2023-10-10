@@ -1,0 +1,26 @@
+.card {
+  overflow: hidden;
+  width: 292px;
+  height: 439px;
+}
+
+.cardImage {
+  border-radius: 3px;
+  margin-bottom: 18px;
+}
+
+.cardCategory {
+  color: var(--light-gray);
+}
+
+.cardTitle {
+}
+
+.cardPrice {
+}
+
+.cardPriceSale {
+  margin-right: 11px;
+  color: var(--light-gray);
+  text-decoration: line-through;
+}
