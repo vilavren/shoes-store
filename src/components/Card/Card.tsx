@@ -4,12 +4,8 @@ import { Span } from '../Span/Span'
 import style from './Card.module.css'
 import { TProduct } from './Card.props'
 
-export const product = await fetch('https://shoes-store-api.vlavr.ru/products/')
-  .then((response) => response.json())
-  .then((data) => data[1])
-
 export const Card = ({ product }: TProduct): JSX.Element => {
-  product.sale = 4600
+  product.sale = 2500
 
   let discount
   if (product.sale) {

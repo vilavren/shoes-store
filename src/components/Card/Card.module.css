@@ -1,8 +1,12 @@
 .card {
   position: relative;
+
   overflow: hidden;
+  display: inline-block;
+
   width: 292px;
-  height: 439px;
+  min-height: 350px;
+  margin: 10px 30px;
 }
 
 .cardImage {
@@ -12,12 +16,6 @@
 
 .cardCategory {
   color: var(--light-gray);
-}
-
-.cardTitle {
-}
-
-.cardPrice {
 }
 
 .cardPriceSale {
