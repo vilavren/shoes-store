@@ -2,9 +2,8 @@ import { P } from '../P/P'
 import { Span } from '../Span/Span'
 
 import style from './Card.module.css'
-import { TProduct } from './Card.props'
 
-export const Card = ({ product }: TProduct): JSX.Element => {
+export const Card = ({ product }): JSX.Element => {
   product.sale = 2500
 
   let discount
